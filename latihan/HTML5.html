@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validasi HTML5</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input, textarea { width: 100%; max-width: 400px; padding: 8px; box-sizing: border-box; }
+        small { color: #7c7c7c; font-size: 0.85em; display: block; margin-top: 4px; }
+    </style>
+</head>
+<body>
+
+    <h2>Form Pendaftaran</h2>
+    
+    <form action="#" method="POST">
+        
+        <div class="form-group">
+            <label for="nama">Nama Lengkap:</label>
+            <input type="text" id="nama" name="nama"
+                    minlength="2" maxlength="20"
+                    required
+                    placeholder="Masukkan nama lengkap">
+            <small>Minimal 2 huruf, maksimal 20 huruf.</small>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"
+                    required
+                    placeholder="contoh@domain.com">
+        </div>
+
+        <div class="form-group">
+            <label for="umur">Umur:</label>
+            <input type="number" id="umur" name="umur"
+                    min="17" max="40"
+                    required
+                    placeholder="Contoh: 25">
+            <small>Batas usia: 17 - 40 tahun.</small>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"
+                    required
+                    placeholder="Masukkan password">
+            <small>Karakter otomatis tersensor saat diketik.</small>
+        </div>
+
+        <div class="form-group">
+            <label for="alamat">Alamat:</label>
+            <textarea id="alamat" name="alamat" rows="3"
+                        placeholder="Masukkan alamat lengkap (Opsional)"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="telepon">Nomor Telepon:</label>
+            <input type="tel" id="telepon" name="telepon"
+                    pattern="^(\+628[1-9][0-9]{5,7}|628[1-9][0-9]{5,7}|88[1-9][0-9]{6,8})$"
+                    required
+                    title="Diawali +62, 62, atau 8, diikuti 8, lalu angka selain 0, dan panjang total 10-12 angka"
+                    placeholder="+628 / 628 / 8...">
+            <small>Format: diawali +62/62/8, diikuti 8, diikuti angka selain 0. Panjang 10-12 nomor.</small>
+        </div>
+
+        <button type="submit">Kirim Form</button>
+
+    </form>
+
+</body>
+</html>
