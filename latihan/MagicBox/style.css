@@ -17,7 +17,6 @@ body {
   margin: 0;
 }
 
-/* Mengatur Tombol Kuning "Magic!" */
 .magic {
   background-color: #f6d142; 
   color: #fff;
@@ -43,7 +42,6 @@ body {
   transform: translateY(2px);
 }
 
-/* Wadah Utama untuk Kotak */
 .boxes {
   display: flex;
   flex-wrap: wrap;
@@ -53,8 +51,7 @@ body {
   position: relative;
   transition: .4s ease;
 }
-
-/* Jika class 'big' aktif, ubah ukurannya menjadi ukuran penuh */
+e
 .boxes.big {
   width: 600px;
   height: 600px;
